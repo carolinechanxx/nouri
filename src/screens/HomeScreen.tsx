@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { BottomNav } from '../components/shared/BottomNav'
 import { HealthTwin } from '../components/shared/HealthTwin'
+import { InstallPwaCard } from '../components/shared/InstallPwaCard'
 import { useUser } from '../context/UserContext'
 import { countByDomain, DOMAIN_META, DOMAIN_ORDER, labelForDomain } from '../lib/domains'
 import { speakText } from '../lib/openai'
@@ -67,6 +68,8 @@ export function HomeScreen() {
         <p>{primaryExperiment ? `Day ${primaryExperiment.checkIns.length + 1} of your primary experiment` : 'Create a primary experiment to begin.'}</p>
         <p className="muted">{confidence}</p>
       </section>
+
+      <InstallPwaCard />
 
       <section className="card stack">
         <div className="row">

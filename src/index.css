@@ -71,9 +71,9 @@ select {
 }
 
 .mobile-shell {
-  width: min(100%, 390px);
+  width: min(100%, 980px);
   margin: 0 auto;
-  padding: 1rem 1rem 5rem;
+  padding: 1rem 1rem 5.5rem;
 }
 
 .stack {
@@ -94,6 +94,10 @@ select {
   padding: 1rem;
   border: 1px solid rgba(107, 79, 58, 0.1);
   box-shadow: 0 10px 20px rgba(73, 45, 27, 0.08);
+}
+
+.install-card {
+  border-style: dashed;
 }
 
 .subcard {
@@ -224,7 +228,7 @@ select {
   left: 50%;
   bottom: 0.8rem;
   transform: translateX(-50%);
-  width: min(360px, calc(100% - 1rem));
+  width: min(560px, calc(100% - 1.2rem));
   background: rgba(253, 250, 244, 0.95);
   border: 1px solid var(--nouri-mist);
   border-radius: 14px;
@@ -405,6 +409,31 @@ h3 {
 @media (max-width: 440px) {
   .mobile-shell {
     padding: 0.85rem 0.8rem 5rem;
+  }
+}
+
+@media (min-width: 860px) {
+  .mobile-shell {
+    padding: 1.2rem 1.2rem 6rem;
+  }
+
+  .card,
+  .button-link {
+    width: 100%;
+  }
+
+  .chat-thread {
+    min-height: 420px;
+  }
+
+  .twin-body {
+    width: 220px;
+    min-width: 220px;
+    height: 250px;
+  }
+
+  .domain-deck {
+    grid-auto-columns: calc((100% - 2.25rem) / 4);
   }
 }
 
